@@ -4,7 +4,7 @@
   "description": "create block-chain with typescript",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "tsc-watch --onSuccess \" node dist index.js\" ",
     "prestart": "npx tsc"
   },
   "repository": {
@@ -17,7 +17,12 @@
     "url": "https://github.com/aiden-te-lee/type-block/issues"
   },
   "homepage": "https://github.com/aiden-te-lee/type-block#readme",
-  "devDependencies": {
+  "dependencies": {
     "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.1",
+    "ts-node": "^10.2.1",
+    "tsc-watch": "^4.5.0"
   }
 }
